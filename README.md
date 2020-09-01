@@ -13,6 +13,36 @@ This is a dataset accompanying the [github repository for our research work](htt
 ### hyperparam and hyperparam_cost
 Contains the data for optimization runs for execution time and execution cost objective function, respectively. 
 
+#### Naming Convention
+Each directory contains a JSON file.   
+The JSON files inside these directories have the following naming convention:
+
+For BO methods
+```
+<Framework>_<Benchmark>_<InputSize>_bo_<Number of Init Samples>_<Hyperparam values>_<Surrogate Model>_<Acquisition Function>
+```
+
+For TPE
+```
+<Framework>_<Benchmark>_<InputSize>_tpe_<Number of Init Samples>_<Hyperparam value>
+```
+
+For Random Search
+```
+<Framework>_<Benchmark>_<InputSize>_random
+```
+
+For Stochastic Hill Climbing
+```
+<Framework>_<Benchmark>_<InputSize>_hc_<Number of Init Samples>_<Temperature value>
+```
+
+For Simulated Annealing
+```
+<Framework>_<Benchmark>_<InputSize>_sa_<Number of Init Samples>_<alpha value>_<Temperature value>
+```
+
+#### JSON Data
 Each file inside contains the data of the configurations tested by an optimization algorithm. The format of the JSON file is as follows:
 ```json
 {
